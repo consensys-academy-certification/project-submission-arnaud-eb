@@ -338,7 +338,7 @@ contract('ProjectSubmission', accounts => {
 
       await ownerGasCost.iadd(withdrawGasCost)
       const ownerAccountBalanceAfter = web3.utils.toBN(await web3.eth.getBalance(owner))
-
+      
       assert.equal(
         ownerAccountBalanceBefore.add(ownerBalanceBefore).toString(),
         ownerAccountBalanceAfter.add(withdrawGasCost).toString(),
